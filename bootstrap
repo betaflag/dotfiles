@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+set -euo pipefail
+cd "$(dirname "$0")"
+
+command -v brew >/dev/null 2>&1 || \
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+brew bundle --file=Brewfile
+stow --target="$HOME" --restow zsh starship ghostty git
+
+# Per-machine git identity (untracked). Fill it in on first setup.
+if [ ! -f "$HOME/.gitconfig.local" ]; then
+  cp gitconfig.local.example "$HOME/.gitconfig.local"
+  echo "→ Created ~/.gitconfig.local — set this machine's git identity."
+fi

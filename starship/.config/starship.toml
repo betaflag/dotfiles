@@ -1,0 +1,3 @@
+# Stock starship, minus the leading blank line and the runtime-version modules.
+add_newline = false
+format = "$directory$git_branch$git_status$character"

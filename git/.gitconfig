@@ -1,0 +1,30 @@
+[include]
+	path = ~/.gitconfig.local
+[gpg]
+	format = ssh
+[gpg "ssh"]
+	allowedSignersFile = ~/.config/git/allowed_signers
+[commit]
+	gpgsign = true
+[init]
+	defaultBranch = main
+[pull]
+	rebase = true
+[push]
+	autoSetupRemote = true
+[core]
+	editor = nvim
+[diff]
+	algorithm = histogram
+[merge]
+	conflictstyle = zdiff3
+[rerere]
+	enabled = true
+[alias]
+	st = status -sb
+	co = checkout
+	br = branch
+	cm = commit
+	lg = log --oneline --graph --decorate -20
+	undo = reset --soft HEAD~1
+	amend = commit --amend --no-edit

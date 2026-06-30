@@ -1,0 +1,8 @@
+# Copy to ~/.gitconfig.local and set this machine's git identity.
+# Untracked and per-machine: this workstation uses one identity + one signing key.
+# Generate the key once:  ssh-keygen -t ed25519 -f ~/.ssh/git-signing -N ""
+# then add ~/.ssh/git-signing.pub to GitHub as a *Signing* key.
+[user]
+	name = Your Name
+	email = you@example.com
+	signingkey = ~/.ssh/git-signing.pub
