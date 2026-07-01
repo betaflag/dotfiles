@@ -4,9 +4,9 @@
   },
   "cli_default_open_behavior": "new_window",
   "theme": {
-    "mode": "light",
-    "light": "Catppuccin Latte",
-    "dark": "Tokyo Night Storm"
+    "mode": "system",
+    "light": "Rosé Pine Dawn",
+    "dark": "Tokyo Night"
   },
   "buffer_font_family": "JetBrains Mono",
   "buffer_font_size": 14,
