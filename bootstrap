@@ -6,7 +6,7 @@ command -v brew >/dev/null 2>&1 || \
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 brew bundle --file=Brewfile
-stow --target="$HOME" --restow zsh starship ghostty git zed
+stow --target="$HOME" --restow zsh starship ghostty git zed nvim
 
 # Per-machine git identity (untracked). Fill it in on first setup.
 if [ ! -f "$HOME/.gitconfig.local" ]; then
