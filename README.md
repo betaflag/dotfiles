@@ -25,6 +25,7 @@ Each top-level directory is a stow package symlinked into `$HOME`:
 | `git`      | `.gitconfig` — aliases, SSH commit signing (identity in `.local`)     |
 | `zed`      | Editor settings and keymap                                            |
 | `nvim`     | Hand-rolled Neovim (lazy.nvim, no distro) — treesitter, telescope, git |
+| `claude`   | `~/.claude/CLAUDE.md` — global Claude Code development standards        |
 
 ## Appearance
 

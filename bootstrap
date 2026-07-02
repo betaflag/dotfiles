@@ -6,7 +6,7 @@ command -v brew >/dev/null 2>&1 || \
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 brew bundle --file=Brewfile
-stow --target="$HOME" --restow zsh starship ghostty git zed nvim
+stow --target="$HOME" --restow zsh starship ghostty git zed nvim claude
 
 # Default apps for file types (LaunchServices). Loop, don't `duti duti.conf` —
 # the batch form races LaunchServices and drops some associations.
