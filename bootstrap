@@ -8,6 +8,12 @@ command -v brew >/dev/null 2>&1 || \
 brew bundle --file=Brewfile
 stow --target="$HOME" --restow zsh starship ghostty git zed nvim
 
+# Default apps for file types (LaunchServices). Loop, don't `duti duti.conf` —
+# the batch form races LaunchServices and drops some associations.
+grep -vE '^\s*(#|$)' duti.conf | while read -r bundle uti role; do
+  duti -s "$bundle" "$uti" "$role" || true
+done
+
 # Per-machine git identity (untracked). Fill it in on first setup.
 if [ ! -f "$HOME/.gitconfig.local" ]; then
   cp gitconfig.local.example "$HOME/.gitconfig.local"
